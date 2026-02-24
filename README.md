@@ -1,5 +1,5 @@
 # My Portfolio
 
-Hello! I'm Fahimresearch, an Industrial Production Engineering graduate.
+Hello! I'm Fahimre, an Industrial Production Engineering graduate.
 
-## My Projects
+
