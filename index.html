@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- =========================================================
+    DOCUMENT / META
+  ========================================================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kazi Fahim — Industrial & Manufacturing Engineer | Lean 4.0 • DVSM • IIoT • Decision Engineering</title>
@@ -8,6 +11,9 @@
   <meta name="description" content="Kazi Fahim — Industrial & Manufacturing Engineer focused on Lean 4.0, DVSM, IIoT-enabled visibility, ERP-integrated workflows, machine learning–assisted decision systems, and measurable operational improvement." />
 
   <style>
+    /* =========================================================
+      DESIGN SYSTEM (COLORS / SHADOWS / RADIUS)
+    ========================================================== */
     :root{
       --primary:#0b66c3;
       --primary-dark:#064a91;
@@ -30,14 +36,16 @@
       color: var(--text);
       background: var(--bg);
     }
-    a{ color: inherit; }
+
     .container{
       max-width: 1180px;
       margin: 0 auto;
       padding: 0 2rem;
     }
 
-    /* Navigation */
+    /* =========================================================
+      NAVIGATION
+    ========================================================== */
     nav{
       background: linear-gradient(135deg, #ffffff 0%, #f5f6f8 100%);
       padding: 1rem 0;
@@ -70,7 +78,9 @@
     nav a:hover{ color: var(--primary); border-bottom-color: var(--primary); opacity:1; }
     nav a.active{ color: var(--primary); border-bottom-color: var(--primary); opacity:1; }
 
-    /* Hero */
+    /* =========================================================
+      HERO
+    ========================================================== */
     .hero{
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color:#fff;
@@ -155,7 +165,9 @@
     }
     .btn-secondary:hover{ background:#fff; color: var(--primary); }
 
-    /* Sections */
+    /* =========================================================
+      GLOBAL SECTION STYLES
+    ========================================================== */
     section{ padding: 4.8rem 2rem; background: var(--bg); }
     section.light-bg{ background: #fff; }
     section h2{
@@ -187,7 +199,10 @@
       max-width: 95ch;
     }
 
-    /* Vision / About shared cards */
+    /* =========================================================
+      REUSABLE CARD + PILLS
+      (This prevents any "plain text" look if something shifts.)
+    ========================================================== */
     .card{
       background: var(--card);
       border: 1px solid var(--border);
@@ -249,7 +264,9 @@
       font-weight: 950;
     }
 
-    /* Vision layout */
+    /* =========================================================
+      VISION SECTION LAYOUT
+    ========================================================== */
     .vision-wrap{
       display:grid;
       grid-template-columns: 1.2fr .8fr;
@@ -257,7 +274,9 @@
       align-items: start;
     }
 
-    /* About layout */
+    /* =========================================================
+      ABOUT SECTION LAYOUT
+    ========================================================== */
     .about-grid{
       display:grid;
       grid-template-columns: .9fr 1.1fr;
@@ -276,11 +295,7 @@
       box-shadow: var(--shadow);
       background:#fff;
     }
-    .profile-figure img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
+    .profile-figure img{ width:100%; height:auto; display:block; }
     .profile-figure figcaption{
       padding: .9rem 1rem;
       color: var(--muted);
@@ -288,7 +303,9 @@
       font-weight: 700;
     }
 
-    /* Highlights / Stats */
+    /* =========================================================
+      HIGHLIGHTS / STATS
+    ========================================================== */
     .stats-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -309,7 +326,27 @@
     .stat-number{ font-size: 2.1rem; color: var(--primary); font-weight: 950; margin-bottom: .35rem; }
     .stat-label{ color: var(--muted); font-size: .95rem; font-weight: 750; }
 
-    /* Experience */
+    /* =========================================================
+      EDUCATION (CARD STYLE)
+    ========================================================== */
+    .education-item{
+      background: var(--card);
+      padding: 1.9rem 1.8rem;
+      margin-bottom: 1.2rem;
+      border-radius: var(--radius);
+      border-left: 5px solid var(--primary);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: all .2s ease;
+    }
+    .education-item:hover{ transform: translateX(5px); box-shadow: var(--shadow-strong); }
+    .education-item h3{ color: var(--primary); margin-bottom:.25rem; font-size: 1.15rem; font-weight: 950; }
+    .education-item .institution{ color: var(--muted); font-size: .95rem; margin-bottom:.45rem; font-weight: 800; }
+    .education-item .details{ color: #7c8797; font-size: .92rem; font-weight: 650; }
+
+    /* =========================================================
+      EXPERIENCE (CARD STYLE)
+    ========================================================== */
     .experience-item{
       background: var(--card);
       padding: 2.2rem 2rem;
@@ -342,10 +379,81 @@
       font-weight: 950;
     }
 
-    /* ------------------------------ */
-    /* ✅ UPDATED PROJECTS (FIXED)     */
-    /* ------------------------------ */
+    /* =========================================================
+      RESEARCH (CARDS + GRID)
+    ========================================================== */
+    .research-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.7rem;
+    }
+    .research-card{
+      background: var(--card);
+      padding: 2.1rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-top: 5px solid var(--primary);
+      border: 1px solid var(--border);
+      transition: all .2s ease;
+    }
+    .research-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow-strong); }
+    .research-card h3{
+      color: var(--primary);
+      font-size: 1.08rem;
+      margin-bottom: .9rem;
+      font-weight: 950;
+      line-height: 1.45;
+    }
+    .status{
+      display:inline-block;
+      background: #e6f2ff;
+      color: var(--primary);
+      padding: .35rem .9rem;
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 900;
+      margin-bottom: .9rem;
+      border: 1px solid rgba(11,102,195,0.18);
+    }
+    .abstract p{
+      color:#3d4a5a;
+      font-size: .95rem;
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+      font-weight: 560;
+      max-width: 90ch;
+    }
+    .keywords{
+      background: #f6f8fb;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: .9rem;
+      border: 1px solid var(--border);
+    }
+    .keywords-label{
+      color: var(--primary);
+      font-weight: 950;
+      font-size: .9rem;
+      margin-bottom: .55rem;
+      display:block;
+    }
+    .keyword{
+      display:inline-block;
+      background: #e6f2ff;
+      color: var(--primary);
+      padding: .28rem .75rem;
+      border-radius: 999px;
+      font-size: .84rem;
+      margin-right: .45rem;
+      margin-bottom: .45rem;
+      font-weight: 900;
+      border: 1px solid rgba(11,102,195,0.18);
+    }
+    .doi{ color:#7c8797; font-size: .9rem; font-style: italic; font-weight: 650; }
 
+    /* =========================================================
+      PROJECTS (UPDATED FLIP CARDS — FIXED HEIGHT + NO CLIPPING)
+    ========================================================== */
     .projects-grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
@@ -361,14 +469,11 @@
       transform-style: preserve-3d;
       transition: transform .55s ease;
     }
-
     @media (max-width: 768px){
       .flip-inner{ height: 620px; } /* more room on mobile */
     }
 
-    .flip-card.flipped .flip-inner{
-      transform: rotateY(180deg);
-    }
+    .flip-card.flipped .flip-inner{ transform: rotateY(180deg); }
 
     .flip-face{
       position: absolute;
@@ -406,18 +511,16 @@
       font-weight: 950;
       line-height:1.35;
     }
-
     .project-duration{ color:#d2e9ff; font-size: .9rem; font-weight: 700; }
 
-    /* ✅ KEY: scroll body instead of clipping */
+    /* ✅ KEY: body scrolls instead of text being cut */
     .project-body{
       padding: 1.7rem 1.6rem 1.25rem;
       flex: 1;
       display:flex;
       flex-direction:column;
-      overflow-y: auto;       /* prevents text cut */
+      overflow-y: auto;
     }
-
     .project-body > p{
       color:#3d4a5a;
       margin-bottom: .95rem;
@@ -425,16 +528,13 @@
       font-weight: 560;
       max-width: 95ch;
     }
-
     .project-body h4{
       color: var(--primary);
       font-size: .98rem;
       margin: 1.05rem 0 .65rem 0;
       font-weight: 950;
     }
-
     .project-body ul{ list-style:none; margin-bottom:.9rem; }
-
     .project-body li{
       color:#3d4a5a;
       margin-bottom:.6rem;
@@ -444,7 +544,6 @@
       font-size:.95rem;
       font-weight: 560;
     }
-
     .project-body li:before{
       content:"•";
       position:absolute;
@@ -461,7 +560,6 @@
       padding-top: 1rem;
       border-top: 1px solid rgba(0,0,0,0.08);
     }
-
     .project-skill{
       background: #e6f2ff;
       color: var(--primary);
@@ -507,7 +605,7 @@
     }
     .btn-solid:hover{ background: var(--primary-dark); }
 
-    /* Back side media also scrolls */
+    /* Back side media */
     .project-media{
       padding: 1.35rem 1.35rem 1.25rem;
       flex: 1;
@@ -516,7 +614,6 @@
       flex-direction:column;
       gap: .9rem;
     }
-
     .media-frame{
       border-radius: 12px;
       overflow:hidden;
@@ -524,11 +621,7 @@
       box-shadow: var(--shadow);
       background:#fff;
     }
-    .media-frame img{
-      width:100%;
-      height:auto;
-      display:block;
-    }
+    .media-frame img{ width:100%; height:auto; display:block; }
     .media-caption{
       color: var(--muted);
       font-weight: 750;
@@ -536,7 +629,7 @@
       line-height: 1.6;
     }
 
-    /* Optional: nicer scrollbar */
+    /* Optional: nicer scrollbar for projects only */
     .project-body::-webkit-scrollbar,
     .project-media::-webkit-scrollbar{ width: 10px; }
     .project-body::-webkit-scrollbar-thumb,
@@ -545,33 +638,201 @@
       border-radius: 999px;
     }
 
-    /* Responsive */
+    /* =========================================================
+      SKILLS (CARDS + GRID)
+    ========================================================== */
+    .skills-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+    .skill-category{
+      background: var(--card);
+      padding: 1.8rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--primary);
+      border: 1px solid var(--border);
+      transition: all .2s ease;
+    }
+    .skill-category:hover{ transform: translateY(-4px); box-shadow: var(--shadow-strong); }
+    .skill-category h3{
+      color: var(--primary);
+      margin-bottom: .8rem;
+      font-size: 1.05rem;
+      font-weight: 950;
+    }
+    .skill-category p{
+      color:#3d4a5a;
+      line-height:1.85;
+      font-size:.95rem;
+      max-width: 85ch;
+      font-weight: 560;
+    }
+
+    /* =========================================================
+      CERTIFICATIONS (CARDS + GRID)
+    ========================================================== */
+    .cert-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.1rem;
+    }
+    .cert-item{
+      background: var(--card);
+      padding: 1.6rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--primary);
+      border: 1px solid var(--border);
+      transition: all .2s ease;
+    }
+    .cert-item:hover{ transform: translateX(5px); box-shadow: var(--shadow-strong); }
+    .cert-item h4{ color: var(--primary); margin-bottom:.45rem; font-size: 1rem; font-weight: 950; }
+    .cert-item p{ color: var(--muted); font-size: .95rem; font-weight: 650; line-height:1.75; }
+
+    /* =========================================================
+      REFERENCES (CARDS + GRID)
+    ========================================================== */
+    .references-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.2rem;
+    }
+    .reference-card{
+      background: var(--card);
+      padding: 1.9rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--primary);
+      border: 1px solid var(--border);
+    }
+    .reference-card h4{ color: var(--primary); margin-bottom:.25rem; font-size: 1.03rem; font-weight: 950; }
+    .reference-card .position{ color: var(--muted); font-size: .9rem; margin-bottom: 1rem; font-weight: 800; }
+    .reference-card p{ color:#3d4a5a; font-size: .92rem; margin-bottom: .5rem; font-weight: 650; }
+    .reference-card a{ color: var(--primary); text-decoration:none; transition: color .2s; }
+    .reference-card a:hover{ color: var(--primary-dark); }
+
+    /* =========================================================
+      CONTACT
+    ========================================================== */
+    .contact{
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color:#fff;
+      text-align:center;
+    }
+    .contact h2{ color:#fff; }
+    .contact h2::after{ background:#fff; }
+
+    .contact > .container > p{
+      color:#d2e9ff;
+      font-size: 1.03rem;
+      margin-bottom: 2.1rem;
+      font-weight: 650;
+      max-width: 92ch;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .contact-info{
+      display:flex;
+      justify-content:center;
+      gap: 2.6rem;
+      flex-wrap:wrap;
+      margin-top: 1.4rem;
+    }
+    .contact-item h4{ color:#fff; margin-bottom: .45rem; font-weight: 950; }
+    .contact-item a, .contact-item p{
+      color:#d2e9ff;
+      text-decoration:none;
+      transition: color .2s;
+      font-weight: 750;
+    }
+    .contact-item a:hover{ color:#fff; }
+
+    /* =========================================================
+      FOOTER
+    ========================================================== */
+    footer{
+      background:#1f2b3a;
+      color:#b9c2cf;
+      text-align:center;
+      padding: 2.2rem;
+      font-size: .92rem;
+    }
+    footer p{ margin-bottom:.35rem; font-weight: 650; }
+
+    /* =========================================================
+      BACK TO TOP BUTTON
+    ========================================================== */
+    .to-top{
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--primary);
+      box-shadow: var(--shadow);
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 950;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: all .2s ease;
+      z-index: 1001;
+    }
+    .to-top.show{
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+      RESPONSIVE
+    ========================================================== */
     @media (max-width: 980px){
       .vision-wrap{ grid-template-columns: 1fr; }
       .about-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px){
+      .hero h1{ font-size: 2.25rem; }
+      .hero .subtitle{ font-size: 1.05rem; }
+      section h2{ font-size: 1.85rem; }
+      nav ul{ gap: .9rem; }
+      .stats-grid{ grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
 
 <body>
-  <!-- Navigation -->
+  <!-- =========================================================
+    NAVIGATION LINKS
+  ========================================================== -->
   <nav>
     <ul>
       <li><a href="#home" class="nav-link">Home</a></li>
       <li><a href="#vision" class="nav-link">Vision</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#highlights" class="nav-link">Highlights</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
       <li><a href="#experience" class="nav-link">Experience</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
       <li><a href="#research" class="nav-link">Research</a></li>
-      <li><a href="#wip" class="nav-link">Work in Progress</a></li>
-      <li><a href="#competency" class="nav-link">Competency Matrix</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#references" class="nav-link">References</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero -->
+  <!-- =========================================================
+    HERO SECTION
+  ========================================================== -->
   <section class="hero" id="home">
     <div class="container">
       <h1>Kazi Fahim</h1>
@@ -605,7 +866,9 @@
     </div>
   </section>
 
-  <!-- Vision -->
+  <!-- =========================================================
+    VISION SECTION
+  ========================================================== -->
   <section class="light-bg" id="vision">
     <div class="container">
       <h2>Vision</h2>
@@ -651,7 +914,10 @@
     </div>
   </section>
 
-  <!-- About -->
+  <!-- =========================================================
+    ABOUT SECTION
+    - Replace profile-placeholder.jpg with your real photo file
+  ========================================================== -->
   <section class="light-bg" id="about">
     <div class="container">
       <h2>About Me</h2>
@@ -695,7 +961,9 @@
     </div>
   </section>
 
-  <!-- Highlights -->
+  <!-- =========================================================
+    HIGHLIGHTS SECTION
+  ========================================================== -->
   <section class="light-bg" id="highlights">
     <div class="container">
       <h2>Professional Highlights</h2>
@@ -722,7 +990,38 @@
     </div>
   </section>
 
-  <!-- Experience -->
+  <!-- =========================================================
+    EDUCATION SECTION
+  ========================================================== -->
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <p class="section-subtitle">Academic foundation in Industrial &amp; Production Engineering and analytical problem-solving</p>
+
+      <div class="education-item">
+        <h3>🎓 B.Sc. in Industrial &amp; Production Engineering</h3>
+        <p class="institution">National Institute of Textile Engineering &amp; Research (NITER), Dhaka</p>
+        <p class="details"><strong>2018 – 2022</strong> | CGPA: 3.24/4.00</p>
+      </div>
+
+      <div class="education-item">
+        <h3>📚 Higher Secondary Certificate (Science)</h3>
+        <p class="institution">Milestone College, Dhaka</p>
+        <p class="details"><strong>2015 – 2017</strong> | GPA: 5.00/5.00</p>
+      </div>
+
+      <div class="education-item">
+        <h3>📚 Secondary School Certificate (Science)</h3>
+        <p class="institution">Milestone College, Dhaka</p>
+        <p class="details"><strong>2013 – 2015</strong> | GPA: 5.00/5.00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+    EXPERIENCE SECTION
+    - Snowtex logo is placed here (as you requested)
+  ========================================================== -->
   <section class="light-bg" id="experience">
     <div class="container">
       <h2>Professional Experience</h2>
@@ -730,7 +1029,10 @@
 
       <div class="experience-item">
         <h3>Production Engineer</h3>
-        <p class="company">Snowtex Group, Dhaka</p>
+        <p class="company">
+          <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group Logo" style="height:22px; vertical-align:middle; margin-right:10px;">
+          Snowtex Group, Dhaka
+        </p>
         <p class="duration">December 2023 – Present</p>
         <ul>
           <li>Lead the Sustainable &amp; Autonomy initiative—coordinating execution plans across 26 departments to align improvement actions with organizational objectives.</li>
@@ -744,10 +1046,13 @@
 
       <div class="experience-item">
         <h3>Management Trainee Officer (MTO)</h3>
-        <p class="company">Snowtex Group, Dhaka</p>
+        <p class="company">
+          <img src="assets/images/Snowtex%20Logo.jfif" alt="Snowtex Group Logo" style="height:22px; vertical-align:middle; margin-right:10px;">
+          Snowtex Group, Dhaka
+        </p>
         <p class="duration">April 2023 – November 2023</p>
         <ul>
-          <li>Designed optimized sewing line layouts and conducted time &amp; motion studies to support standardization and stable flow.</li>
+          <li>Designed optimized line layouts and conducted time &amp; motion studies to support standardization and stable flow.</li>
           <li>Introduced ERP-linked real-time monitoring boards to improve visibility and enable faster operational responses.</li>
           <li>Executed Lean routines (Kaizen, 5S) to reduce losses and stabilize performance through structured improvement cycles.</li>
           <li>Collaborated with international process engineering teams to support capability upgrades and strengthen quality consistency.</li>
@@ -759,17 +1064,21 @@
     </div>
   </section>
 
-  <!-- ✅ PROJECTS (UPDATED) -->
+  <!-- =========================================================
+    PROJECTS SECTION (FLIP CARDS)
+    - Click "View Details" to flip and see images properly
+    - Replace placeholder images later if needed
+  ========================================================== -->
   <section class="light-bg" id="projects">
     <div class="container">
       <h2>Industry Projects &amp; Achievements</h2>
       <p class="section-subtitle">
-        Click <strong>View Details</strong> on any card to flip and view images in full size (no clipping).
+        Click <strong>View Details</strong> on any project to flip the card and view images clearly (no clipping, consistent card size).
       </p>
 
       <div class="projects-grid">
 
-        <!-- Project 1 -->
+        <!-- PROJECT 1 -->
         <div class="flip-card" id="proj1">
           <div class="flip-inner">
 
@@ -822,8 +1131,8 @@
 
               <div class="project-media">
                 <div class="media-frame">
-                  <!-- Replace with your layout image later -->
-                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with layout design workflow image)" loading="lazy">
+                  <!-- Replace later with layout output image -->
+                  <img src="assets/images/IOT.jpeg" alt="Placeholder image for layout workflow (replace with your layout output image)" loading="lazy">
                 </div>
                 <p class="media-caption">
                   Replace this image with a workflow screenshot (layout sheet, precedence chart, or algorithm output) when available.
@@ -838,7 +1147,7 @@
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- PROJECT 2 -->
         <div class="flip-card" id="proj2">
           <div class="flip-inner">
 
@@ -863,7 +1172,7 @@
 
                 <h4>Impact</h4>
                 <ul>
-                  <li>Achieved a 7% efficiency improvement through faster downtime recovery and stronger daily control</li>
+                  <li>Delivered a 7% efficiency gain via faster downtime recovery and stronger daily control</li>
                   <li>Enabled ERP-connected visibility for better planning alignment and escalation speed</li>
                 </ul>
 
@@ -891,11 +1200,11 @@
 
               <div class="project-media">
                 <div class="media-frame">
-                  <!-- NOTE: Your file name has space, keep %20 -->
+                  <!-- NOTE: file name includes spaces, keep %20 -->
                   <img src="assets/images/Iot%20visual%20board.jpeg" alt="Visual performance board supporting daily management" loading="lazy">
                 </div>
                 <p class="media-caption">
-                  Performance reporting designed to shorten response time and strengthen daily management discipline.
+                  Visual performance reporting to shorten response time and strengthen daily management discipline.
                 </p>
 
                 <div class="media-frame">
@@ -914,7 +1223,7 @@
           </div>
         </div>
 
-        <!-- Project 3 -->
+        <!-- PROJECT 3 -->
         <div class="flip-card" id="proj3">
           <div class="flip-inner">
 
@@ -965,7 +1274,7 @@
 
               <div class="project-media">
                 <div class="media-frame">
-                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with QR/store workflow screenshot)" loading="lazy">
+                  <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with store workflow screenshot)" loading="lazy">
                 </div>
                 <p class="media-caption">
                   Replace with a store dashboard / QR workflow screenshot when available.
@@ -980,7 +1289,7 @@
           </div>
         </div>
 
-        <!-- Project 4 -->
+        <!-- PROJECT 4 -->
         <div class="flip-card" id="proj4">
           <div class="flip-inner">
 
@@ -1034,7 +1343,7 @@
                   <img src="assets/images/IOT.jpeg" alt="Placeholder image (replace with OEE dashboard screenshot)" loading="lazy">
                 </div>
                 <p class="media-caption">
-                  Replace with OEE dashboard/report screenshot for cutting operations when available.
+                  Replace with an OEE dashboard/report snapshot when available.
                 </p>
               </div>
 
@@ -1046,7 +1355,7 @@
           </div>
         </div>
 
-        <!-- Project 5 -->
+        <!-- PROJECT 5 -->
         <div class="flip-card" id="proj5">
           <div class="flip-inner">
 
@@ -1116,33 +1425,24 @@
     </div>
   </section>
 
-  <!-- STOP HERE ✅ -->
-  <!-- Paste this whole file, then keep your remaining sections (Research → Footer → Script) exactly as you already have. -->
-
-  <!-- IMPORTANT: Your existing <script> must include the flip-card click handler:
-       document.addEventListener("click", (e) => {
-         const btn = e.target.closest("[data-flip-target]");
-         if (!btn) return;
-         const targetId = btn.getAttribute("data-flip-target");
-         document.getElementById(targetId)?.classList.toggle("flipped");
-       });
-  -->
-  <!-- Research -->
+  <!-- =========================================================
+    RESEARCH SECTION
+  ========================================================== -->
   <section id="research">
     <div class="container">
       <h2>Research &amp; Publications</h2>
       <p class="section-subtitle">
-        Research emphasizing Lean 4.0, IIoT-enabled visibility, learning behavior, anomaly signals, and structured decision frameworks for stable and fair production systems.
+        Research centered on Lean 4.0, IIoT-enabled manufacturing visibility, operator learning behavior, and optimization methods for balanced and equitable production systems.
       </p>
 
       <div class="research-grid">
         <div class="research-card">
           <span class="status">Under Review</span>
-          <h3>IoT-Enabled Lean 4.0 Framework for Learning-Based Process Difficulty Standardization and Difficulty-Adjusted Operator Skill Evaluation in Sewing Lines</h3>
+          <h3>An IoT-Enabled Lean 4.0 Framework for Learning-Based Process Difficulty Standardization and Difficulty-Adjusted Operator Skill Evaluation in Sewing Lines</h3>
           <div class="abstract">
             <p>
-              <strong>Contribution:</strong> Proposes a Lean 4.0 framework integrating IIoT data with learning-curve modeling and robust anomaly detection to establish objective performance standards.
-              A hybrid MCDM model (CRITIC, Entropy, TOPSIS, VIKOR) generates a Process Difficulty Index to support fair evaluation and improved task-to-skill assignment.
+              <strong>Summary:</strong> Proposes a Lean 4.0 framework integrating IIoT data with learning-curve modeling and robust anomaly detection to build objective performance standards.
+              A hybrid MCDM model (CRITIC, Entropy, TOPSIS, VIKOR) produces a Process Difficulty Index to support fair evaluation and improved task-workstation alignment.
             </p>
           </div>
           <div class="keywords">
@@ -1158,20 +1458,20 @@
 
         <div class="research-card">
           <span class="status">Under Review</span>
-          <h3>Optimizing Assembly Line Efficiency Using RPW and Evolutionary Algorithms: A Comparative Analysis with Validation</h3>
+          <h3>Optimizing Assembly Line Efficiency Using RPW and Evolutionary Algorithms: A Comparative Analysis</h3>
           <div class="abstract">
             <p>
-              <strong>Contribution:</strong> Develops an integrated balancing approach using RPW with evolutionary optimization and validation through discrete-event modeling.
-              Results demonstrate improved workstation allocation and line efficiency while maintaining precedence feasibility under industrial constraints.
+              <strong>Summary:</strong> Develops an integrated balancing approach using RPW with evolutionary optimization and discrete-event simulation validation.
+              Results demonstrate improved workstation allocation and higher efficiency while preserving precedence feasibility for industrial deployment.
             </p>
           </div>
           <div class="keywords">
             <span class="keywords-label">Keywords</span>
+            <span class="keyword">Line Balancing</span>
             <span class="keyword">RPW</span>
             <span class="keyword">Evolutionary Algorithms</span>
-            <span class="keyword">Line Efficiency</span>
-            <span class="keyword">Validation</span>
             <span class="keyword">Optimization</span>
+            <span class="keyword">Discrete Event Simulation</span>
           </div>
           <p class="doi">Status: Manuscript under review (publication details to be added upon acceptance).</p>
         </div>
@@ -1179,90 +1479,63 @@
     </div>
   </section>
 
-  <!-- Work in Progress -->
-  <section class="light-bg" id="wip">
+  <!-- =========================================================
+    SKILLS SECTION
+  ========================================================== -->
+  <section id="skills">
     <div class="container">
-      <h2>Work in Progress</h2>
+      <h2>Core Competencies &amp; Technical Skills</h2>
       <p class="section-subtitle">
-        Current engineering development focused on predictive capability and decision reliability.
+        A focused capability set for industrial execution, digital manufacturing enablement, and improvement leadership.
       </p>
 
-      <div class="wip-grid">
-        <div class="card">
-          <h3>Machine Learning for Cutting Speed Prediction</h3>
-          <p>
-            <strong>Status:</strong> In Development
-          </p>
-          <p>
-            <strong>Purpose:</strong> Build predictive decision support for cutting operations by modeling speed-performance relationships, variability drivers, and controllable factors.
-          </p>
-          <p style="color: var(--muted); font-weight: 700;">
-            Description will be added (you will provide the detailed technical statement).
-          </p>
-          <div class="wip-badge" aria-label="Work-in-progress tags">
-            <span class="pill">Machine Learning</span>
-            <span class="pill">Predictive Control</span>
-            <span class="pill">Process Signals</span>
-            <span class="pill">Decision Support</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>DVSM &amp; Digital Twin Readiness</h3>
-          <p>
-            Establishing the foundations for DVSM and digital twin readiness by defining data validity rules, event definitions, and standardized workflows that support accurate virtual validation.
-          </p>
-          <ul class="highlights">
-            <li>Define event taxonomy for flow, losses, and rework</li>
-            <li>Ensure data integrity for reliable decision models</li>
-            <li>Connect operational governance with digital visibility</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Competency Matrix -->
-  <section id="competency">
-    <div class="container">
-      <h2>Competency Matrix</h2>
-      <p class="section-subtitle">
-        A structured capability set with clear separation of methods, systems, and decision tools—without overlapping concepts.
-      </p>
-
-      <div class="matrix-grid">
-        <div class="matrix-item">
+      <div class="skills-grid">
+        <div class="skill-category">
           <h3>🏭 Industrial Engineering Methods</h3>
-          <p>
-            DVSM • SIPOC • Value Stream Mapping • Work Study • Time &amp; Motion Study • Standard Data • RPW • Kilbridge • Bottleneck Analysis • Flow Control • Workstation Design
-          </p>
+          <p>SIPOC • Value Stream Mapping (VSM) • Standard Work • Work Measurement • Method Study • Bottleneck &amp; Constraint Analysis • Process Capability Basics • Control Plans</p>
         </div>
 
-        <div class="matrix-item">
+        <div class="skill-category">
+          <h3>🔧 Flow, Balance &amp; Execution</h3>
+          <p>RPW • Kilbridge Method • Workstation Allocation • Throughput Stability • WIP Control Concepts • Heuristic-Based Workflow Structuring • Scheduling Discipline (CPM)</p>
+        </div>
+
+        <div class="skill-category">
           <h3>🌐 Digital Manufacturing Systems</h3>
-          <p>
-            ERP Workflow Modeling • Traceability Architecture • IIoT Data Pipelines • Data Governance • KPI Integrity • Digital Reporting Discipline • Operational Dashboards
-          </p>
+          <p>ERP Integration • Real-time Monitoring • IIoT Visibility • Traceability Design • QR-Based Material Control • Digital Reporting • Data Governance for Shop-floor Decisions</p>
         </div>
 
-        <div class="matrix-item">
+        <div class="skill-category">
+          <h3>📊 Operational Analytics</h3>
+          <p>Power BI • Looker Studio • Advanced Excel • KPI Architecture • OEE Systems • Loss Analysis • Trend Tracking • Root Cause Support</p>
+        </div>
+
+        <div class="skill-category">
+          <h3>🤖 Machine Learning (Applied)</h3>
+          <p>Learning-Curve Modeling • Anomaly Detection (Isolation Forest, LOF, HDBSCAN) • Pattern Signals for Predictive Decisions • Data Preparation in Python</p>
+        </div>
+
+        <div class="skill-category">
           <h3>🎯 Decision Engineering</h3>
-          <p>
-            MCDM (TOPSIS, VIKOR) • CRITIC &amp; Entropy Weighting • Risk Evaluation • Control Plans • Anomaly Signals • Learning Behavior Modeling • Structured Decision Rules
-          </p>
+          <p>MCDM (TOPSIS, VIKOR) • CRITIC &amp; Entropy Weighting • Risk Assessment • Structured Prioritization • Decision Robustness via Scenario Testing</p>
         </div>
 
-        <div class="matrix-item">
-          <h3>💻 Tools &amp; Platforms</h3>
-          <p>
-            Python • Arena (Discrete Event Modeling) • Power BI • Looker Studio • Advanced Excel • Professional Documentation • ERP Tools
-          </p>
+        <div class="skill-category">
+          <h3>🔄 Simulation (Validation)</h3>
+          <p>Discrete Event Simulation (Arena) • Model Validation Concepts • “What-if” Scenario Evaluation • Improvement Verification before Deployment</p>
+        </div>
+
+        <div class="skill-category">
+          <h3>💼 Leadership &amp; Delivery</h3>
+          <p>Cross-functional Coordination • Stakeholder Communication • Improvement Governance • SOP Development • KPI Ownership • Change Management Discipline</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Certifications -->
+  <!-- =========================================================
+    CERTIFICATIONS SECTION
+  ========================================================== -->
   <section class="light-bg" id="certifications">
     <div class="container">
       <h2>Certifications &amp; Recognitions</h2>
@@ -1304,7 +1577,37 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- =========================================================
+    REFERENCES SECTION
+  ========================================================== -->
+  <section id="references">
+    <div class="container">
+      <h2>Professional References</h2>
+      <p class="section-subtitle">References are available upon request.</p>
+
+      <div class="references-grid">
+        <div class="reference-card">
+          <h4>Sohedul Islam Shahin</h4>
+          <p class="position">Senior A.G.M, Operational Project &amp; CI — Snowtex Group</p>
+          <p><strong>Snowtex Group, Dhaka</strong></p>
+          <p>📧 Email: <a href="mailto:Shahin.ci@gmail.com">Shahin.ci@gmail.com</a></p>
+          <p>📱 Phone: <a href="tel:+8801833300697">+880 183 330 0697</a></p>
+        </div>
+
+        <div class="reference-card">
+          <h4>Md. Mahabub Hasan</h4>
+          <p class="position">Academic In-Charge, Assistant Professor — NITER</p>
+          <p><strong>National Institute of Textile Engineering &amp; Research (NITER)</strong></p>
+          <p>📧 Email: <a href="mailto:merajtex20@gmail.com">merajtex20@gmail.com</a></p>
+          <p>📱 Phone: <a href="tel:+8801916146208">+880 1916 146 208</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+    CONTACT SECTION
+  ========================================================== -->
   <section class="contact" id="contact">
     <div class="container">
       <h2>Contact</h2>
@@ -1336,21 +1639,27 @@
     </div>
   </section>
 
+  <!-- =========================================================
+    FOOTER
+  ========================================================== -->
   <footer>
     <p>&copy; 2026 Kazi Fahim. All rights reserved.</p>
-    <p>Industrial &amp; Manufacturing Engineer • Lean 4.0 • DVSM • IIoT • Decision Engineering</p>
+    <p>Industrial &amp; Manufacturing Engineer • Lean 4.0 • DVSM • IIoT • ERP-Integrated Operations</p>
   </footer>
 
+  <!-- Back-to-top button -->
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
   <script>
-    // Active nav link on scroll (lightweight)
+    /* =========================================================
+      NAV ACTIVE LINK ON SCROLL (LIGHTWEIGHT)
+    ========================================================== */
     const sections = document.querySelectorAll("section[id]");
     const navLinks = document.querySelectorAll(".nav-link");
 
     function setActiveLink(){
       let currentId = "home";
-      const offset = 130; // accounts for sticky nav
+      const offset = 120; // accounts for sticky nav height
       sections.forEach(sec => {
         const top = sec.offsetTop - offset;
         if (window.scrollY >= top) currentId = sec.id;
@@ -1362,32 +1671,27 @@
     window.addEventListener("scroll", setActiveLink);
     window.addEventListener("load", setActiveLink);
 
-    // Back-to-top button
+    /* =========================================================
+      BACK TO TOP BUTTON
+    ========================================================== */
     const toTop = document.getElementById("toTop");
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 650) toTop.classList.add("show");
+      if (window.scrollY > 600) toTop.classList.add("show");
       else toTop.classList.remove("show");
     });
     toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-    // Flip-card controller (button click)
-    function toggleFlip(cardId){
-      const el = document.getElementById(cardId);
-      if (!el) return;
-      el.classList.toggle("flipped");
-    }
-
+    /* =========================================================
+      PROJECT FLIP HANDLER
+      - Any button with data-flip-target="projX" flips that card
+    ========================================================== */
     document.addEventListener("click", (e) => {
       const btn = e.target.closest("[data-flip-target]");
       if (!btn) return;
       const targetId = btn.getAttribute("data-flip-target");
-      toggleFlip(targetId);
-    });
-
-    // Optional: ESC closes any flipped card for faster navigation
-    document.addEventListener("keydown", (e) => {
-      if (e.key !== "Escape") return;
-      document.querySelectorAll(".flip-card.flipped").forEach(c => c.classList.remove("flipped"));
+      const card = document.getElementById(targetId);
+      if (!card) return;
+      card.classList.toggle("flipped");
     });
   </script>
 </body>
