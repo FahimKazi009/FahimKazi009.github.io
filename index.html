@@ -1107,12 +1107,11 @@
                 </div>
               </div>
               <div class="project-body">
-                <p><strong>Objective:</strong> Build a repeatable layout and work allocation workflow to improve balancing accuracy and reduce design cycle time.</p>
-                <h4>Engineering Method</h4>
+                <p><strong>Objective:</strong> Replace manual line balancing with an Integer Programming model that evaluates all feasible layouts and selects the best one automatically.</h4>
                 <ul>
                   <li>Precedence-driven task assignment using Ranked Positional Weight (RPW)</li>
-                  <li>Workload balancing strengthened with Kilbridge sequencing logic</li>
-                  <li>Constraint-aware outputs aligned with shop-floor feasibility</li>
+                  <li>The Integer solver evaluates all feasible task-to-workstation combinations — any layout violating predecessor rules, capacity, or machine limits is automatically rejected</li>
+                  <li>From valid layouts, the solver selects the best based on priority: BPT limit → Transportation reduction → Machine type diversity per workstation</li>
                 </ul>
                 <h4>Operational Value</h4>
                 <ul>
