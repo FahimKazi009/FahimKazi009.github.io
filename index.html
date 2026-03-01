@@ -623,6 +623,8 @@
       display: flex;
       flex-direction: column;
       gap: .85rem;
+      min-height: 0;
+      -webkit-overflow-scrolling: touch;
     }
     .media-frame{
       border-radius: 10px;
@@ -631,6 +633,7 @@
       box-shadow: var(--shadow);
     }
     .media-frame img{ width: 100%; height: auto; display: block; }
+    .media-frame video{ width: 100%; height: auto; display: block; object-fit: contain; }
     .media-caption{ color: var(--muted); font-weight: 750; font-size: .88rem; line-height: 1.6; }
 
     .project-body::-webkit-scrollbar,
